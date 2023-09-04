@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASES['default'] = dj_database_url.parse('postgres://todo_app_django_user:D6KKexQVxpTxYYMOkaC8oOyH0KJqnYbO@dpg-cjqm3hdhe99c73dpf9mg-a/todo_app_django')
+
 
 #postgres://todo_app_django_user:D6KKexQVxpTxYYMOkaC8oOyH0KJqnYbO@dpg-cjqm3hdhe99c73dpf9mg-a/todo_app_django
 
