@@ -32,8 +32,15 @@ def update_task(request,id):
           form = TaskForm(request.POST, instance=task)
           if form.is_valid():
                form.save()
-               return redirect('completed_tasks')
+               return redirect('show_tasks')
           else:
                return render(request,"update-task.html",{'form':form})
      form = TaskForm(instance=task)
      return render(request,"update-task.html",{'form':form})
+
+def complete_task(request,id):
+     task = TaskModel.objects.get(pk = id)
+     task.is_completed = True
+     task.save()
+     messages.success(request,"Task Completed")
+     return redirect('completed_tasks')
