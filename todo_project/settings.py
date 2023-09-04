@@ -12,16 +12,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import dj_database_url
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k@!-%15#j95=uxg!v!yihft3k-!(s@+m4(gk0gu%z!^_ccsn4z'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,7 +87,7 @@ import os
 # }}
 
 DATABASES = {
-    'default':dj_database_url.parse("postgres://todo_app_django_085w_user:JGmcbyQuMSJqQc0t3lbPxjbxh4rWo7FO@dpg-cjqn2g61208c73csg90g-a.oregon-postgres.render.com/todo_app_django_085w")
+    'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 

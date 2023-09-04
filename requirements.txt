@@ -26,3 +26,5 @@ typing_extensions==4.7.1
 tzdata==2023.3
 virtualenv==20.24.3
 gunicorn==21.2.0
+dj-database-url==2.1.0
+psycopg2-binary==2.9.7
