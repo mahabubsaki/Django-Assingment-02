@@ -89,6 +89,13 @@ DATABASES = {
 }
 
 
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
+
+
 #postgres://todo_app_django_user:D6KKexQVxpTxYYMOkaC8oOyH0KJqnYbO@dpg-cjqm3hdhe99c73dpf9mg-a/todo_app_django
 
 
