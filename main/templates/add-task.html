@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Add Task {% endblock %}
+{% block main %}
+<div class="py-5">
+
+    <h2 class="text-center text-3xl font-semibold">Create a Task</h2>
+    <form method="post" class="my-6 w-[500px] mx-auto flex flex-col gap-4">
+        {% csrf_token %}
+        <div class="relative z-0 w-full mb-6 group">
+            {{ form.taskTitle }}
+            <label for="taskTitle"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Task
+                Title</label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+            {{ form.taskDescription }}
+            <label for="taskDescription"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Task
+                Description</label>
+        </div>
+
+        <div class="mt-4 flex justify-center">
+            <button type="submit"
+                class="text-white inline-block bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br duration-500 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Add
+                Task</button>
+        </div>
+    </form>
+
+
+
+</div>
+
+{% endblock %}

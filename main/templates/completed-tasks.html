@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %} Show Tasks {% endblock %}
+{% block main %}
+<div class="py-5 w-full overflow-hidden">
+
+    <div class="relative  w-full px-5 py-4 mx-auto overflow-x-auto md:w-[80%] shadow-md sm:rounded-lg">
+        {% if tasks %}
+        <h2 class="text-center text-3xl font-semibold my-4">Completed Tasks Tasks</h2>
+        <table class="w-full  text-sm text-left text-gray-500 ">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        No
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Task Title
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Task Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap">
+                        {{forloop.counter}}
+                    </th>
+                    <td class="px-6 py-4 text-center">
+                        {{task.taskTitle}}
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        {{task.taskDescription}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="text-center text-2xl font-semibold">No Task is completed</p>
+        {% endif %}
+    </div>
+
+
+
+</div>
+
+{% endblock %}
