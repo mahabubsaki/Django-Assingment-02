@@ -2,8 +2,8 @@
 {% block title %} Show Tasks {% endblock %}
 {% block main %}
 <div class="py-5 w-full overflow-hidden">
-    <h2 class="text-center text-3xl font-semibold">Update the task</h2>
-    <form method="post" class="my-6 w-[500px] mx-auto flex flex-col gap-4">
+    <h2 class="text-center text-3xl font-semibold w-full">Update the task</h2>
+    <form method="post" class="my-6 w-[90%] md:w-[700px] mx-auto flex flex-col gap-4">
         {% csrf_token %}
         <div class="relative z-0 w-full mb-6 group">
             {{ form.taskTitle }}
