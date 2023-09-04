@@ -25,3 +25,4 @@ sqlparse==0.2.4
 typing_extensions==4.7.1
 tzdata==2023.3
 virtualenv==20.24.3
+gunicorn==19.7.1
