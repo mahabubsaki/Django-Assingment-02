@@ -12,13 +12,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import dj_database_url
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(BASE_DIR / '.env')
+# load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -89,6 +89,8 @@ import os
 #             'ENGINE': 'django.db.backends.sqlite3',
 #             'NAME': 'db.sqlite3',
 # }}
+
+# postgres://todo_app_django_085w_user:JGmcbyQuMSJqQc0t3lbPxjbxh4rWo7FO@dpg-cjqn2g61208c73csg90g-a.oregon-postgres.render.com/todo_app_django_085w
 
 DATABASES = {
     'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
