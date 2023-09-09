@@ -90,7 +90,6 @@ import os
 #             'NAME': 'db.sqlite3',
 # }}
 
-# postgres://todo_app_django_085w_user:JGmcbyQuMSJqQc0t3lbPxjbxh4rWo7FO@dpg-cjqn2g61208c73csg90g-a.oregon-postgres.render.com/todo_app_django_085w
 
 DATABASES = {
     'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
