@@ -1,7 +1,6 @@
 asgiref==3.7.2
 autopep8==2.0.1
 distlib==0.3.7
-dnspython==2.4.2
 EasyProcess==1.1
 entrypoint2==1.1
 filelock==3.12.2
